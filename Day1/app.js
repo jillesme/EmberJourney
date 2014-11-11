@@ -1,7 +1,5 @@
 var App = Ember.Application.create();
 
-App.days = 0;
-
 App.ApplicationController = Ember.Controller.extend({
   days: (function () {
     var started = new Date(2014, 10, 11); // Shitty date
