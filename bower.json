@@ -1,0 +1,22 @@
+{
+  "name": "EmberJourney",
+  "version": "1.0.0",
+  "homepage": "https://github.com/jillesme/EmberJourney",
+  "authors": [
+    "Jilles Soeters <info@jilles.me>"
+  ],
+  "description": "Learning Ember",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ember": "~1.8.1"
+  }
+}
