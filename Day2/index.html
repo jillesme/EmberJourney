@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ember Day 2</title>
+</head>
+<body>
+
+  <script type="text/x-handlebars" id="index">
+    <h1>Ember Day 2!</h1>
+    {{#link-to 'page'}}<p>the page</p>{{/link-to}}
+  </script>
+
+  <script type="text/x-handlebars" id="page">
+    <h1>Hi I am a page!</h1>
+    {{#link-to 'index'}}<p>the index </p>{{/link-to}}
+  </script>
+
+
+
+  <!-- Dependencies -->
+  <script src="../libs/jquery/dist/jquery.js"></script>
+  <script src="../libs/handlebars/handlebars.js"></script>
+  <script src="../libs/ember/ember.js"></script>
+  <!-- Actual App -->
+  <script src="./app.js"></script>
+</body>
+</html>
