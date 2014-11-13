@@ -19,8 +19,8 @@
     {{#link-to 'settings'}}Settings{{/link-to}}
     <hr>
     <ul>
-    {{#each}}
-    <li>{{ firstName }} {{ lastName }} - {{ email }} </li>
+    {{#each user in users }}
+    <li>{{ user.firstName }} {{ user.lastName }} - {{ user.email }} </li>
     {{/each}}
   </script>
 

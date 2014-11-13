@@ -40,9 +40,13 @@ App.IndexRoute = Ember.Route.extend({
 });
 
 App.UsersRoute = Ember.Route.extend({
-  // model overwrites the setupController
+  // model overwrites the setupController's model
   model: function () {
-    return users;
+    var data = {
+      title: 'All Users',
+      users: users
+    };
+    return data;
   }
 });
 
