@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ember Day 2</title>
+  <title>Ember Day 3</title>
 </head>
 <body>
 
@@ -17,6 +17,11 @@
     <h1>{{title}}</h1>
     {{#link-to 'index'}}Home{{/link-to}}
     {{#link-to 'settings'}}Settings{{/link-to}}
+    <hr>
+    <ul>
+    {{#each}}
+    <li>{{ firstName }} {{ lastName }} - {{ email }} </li>
+    {{/each}}
   </script>
 
   <script type="text/x-handlebars" id="settings">
