@@ -6,21 +6,23 @@
 </head>
 <body>
 
-  <h1>Ember Day 2!</h1>
+  <h1>Ember Day 3!</h1>
   <script type="text/x-handlebars" id="index">
     <h1>{{title}}</h1>
-    {{#link-to 'page'}}<p>the page</p>{{/link-to}}
-    {{#link-to 'anotherpage'}}<p>another page</p>{{/link-to}}
+    {{#link-to 'users'}}Users{{/link-to}}
+    {{#link-to 'settings'}}Settings{{/link-to}}
   </script>
 
-  <script type="text/x-handlebars" id="page">
+  <script type="text/x-handlebars" id="users">
     <h1>{{title}}</h1>
-    {{#link-to 'index'}}<p>the index </p>{{/link-to}}
+    {{#link-to 'index'}}Home{{/link-to}}
+    {{#link-to 'settings'}}Settings{{/link-to}}
   </script>
 
-  <script type="text/x-handlebars" id="anotherpage">
+  <script type="text/x-handlebars" id="settings">
     <h1>{{title}}</h1>
-    {{#link-to 'index'}}<p>the index </p>{{/link-to}}
+    {{#link-to 'index'}}Home{{/link-to}}
+    {{#link-to 'users'}}Users{{/link-to}}
   </script>
 
 
