@@ -54,9 +54,3 @@ App.UsersRoute = Ember.Route.extend({
     return data;
   }
 });
-
-App.SettingsRoute = Ember.Route.extend({
-  setupController: function (controller) {
-    controller.set('title', 'Settings');
-  }
-});

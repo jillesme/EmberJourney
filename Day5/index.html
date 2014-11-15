@@ -10,13 +10,11 @@
   <script type="text/x-handlebars" id="index">
     <h1>{{title}}</h1>
     {{#link-to 'users'}}Users{{/link-to}}
-    {{#link-to 'settings'}}Settings{{/link-to}}
   </script>
 
   <script type="text/x-handlebars" id="users">
     <h1>{{title}}</h1>
     {{#link-to 'index'}}Home{{/link-to}}
-    {{#link-to 'settings'}}Settings{{/link-to}}
     <hr>
     <ul>
     {{#each user in users }}
@@ -27,15 +25,12 @@
   </script>
 
   <script type="text/x-handlebars" id="user">
-    {{firstName}} {{lastName}}
+    {{! chrome bug, sometimes space is not resolved... fixed in 1.9 }}
+    <hr>
+    {{firstName}}&nbsp;{{lastName}}
+    <br>
+    {{email}}
   </script>
-
-  <script type="text/x-handlebars" id="settings">
-    <h1>{{title}}</h1>
-    {{#link-to 'index'}}Home{{/link-to}}
-    {{#link-to 'users'}}Users{{/link-to}}
-  </script>
-
 
   <!-- Dependencies -->
   <script src="../libs/jquery/dist/jquery.js"></script>
