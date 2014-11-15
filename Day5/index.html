@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ember Day 5</title>
+</head>
+<body>
+
+  <h1>Ember Day 5!</h1>
+  <script type="text/x-handlebars" id="index">
+    <h1>{{title}}</h1>
+    {{#link-to 'users'}}Users{{/link-to}}
+    {{#link-to 'settings'}}Settings{{/link-to}}
+  </script>
+
+  <script type="text/x-handlebars" id="users">
+    <h1>{{title}}</h1>
+    {{#link-to 'index'}}Home{{/link-to}}
+    {{#link-to 'settings'}}Settings{{/link-to}}
+    <hr>
+    <ul>
+    {{#each user in users }}
+    <li>{{#link-to 'user' user}} {{ user.firstName }} {{ user.lastName }} {{/link-to}} - {{ user.email }} </li>
+    {{/each}}
+
+    {{ outlet }}
+  </script>
+
+  <script type="text/x-handlebars" id="user">
+    {{firstName}} {{lastName}}
+  </script>
+
+  <script type="text/x-handlebars" id="settings">
+    <h1>{{title}}</h1>
+    {{#link-to 'index'}}Home{{/link-to}}
+    {{#link-to 'users'}}Users{{/link-to}}
+  </script>
+
+
+  <!-- Dependencies -->
+  <script src="../libs/jquery/dist/jquery.js"></script>
+  <script src="../libs/handlebars/handlebars.js"></script>
+  <script src="../libs/ember/ember.js"></script>
+  <!-- Actual App -->
+  <script src="./app.js"></script>
+</body>
+</html>
