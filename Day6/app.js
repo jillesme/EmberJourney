@@ -54,8 +54,9 @@ App.UsersRoute = Ember.Route.extend({
     return data;
   },
     actions: {
-      edit: function () {
-        console.log(this);
+      edit: function (user) {
+        var users = this.modelFor('users').users;
+        console.log(users, user);
       }
     }
 });
